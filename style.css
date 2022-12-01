@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght @200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(186, 180, 169);
+    min-height: 100vh;
+
+}
+
+.wrapper{
+    background-color: aliceblue;
+    width: 450px;
+    box-shadow: 120px rgb(196, 23, 23);
+    border-radius: 20px;
+}
+
+.nick-signup{
+    padding: 25px 30px;
+    
+}
+.nick-signup header{
+    font-size: 25px;
+    font-weight: 600;
+    border-bottom: 1px solid rgb(207, 194, 194);
+    padding: 10px;
+    text-align: center;
+}
+
+.nick-signup form{
+    margin: 21px 0;
+}
+
+.nick-signup form .mistake-text{
+    background-color: rgb(251, 181, 181);
+    padding: 8px 10px;
+    text-align: center;
+    color: rgb(226, 43, 195);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(234, 7, 154);  
+    display: none;  
+}
+.nick-signup form .inputs{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+.nick-signup form .inputs input{
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0 10px;
+    border: 1px solid rgb(238, 10, 219);
+    
+}
+.nick-signup form .image input{
+font-size: 17px;
+
+}
+.nick-signup form .submit input{
+    margin-top: 13px;
+
+    height: 45px;
+    border: none;
+    width: 100%;
+    border-radius: 7px;
+    color: whitesmoke;
+    background-color: aquamarine;
+    font-size: medium;
+    font-weight: 600;
+    font-style: oblique;
+    cursor: pointer;
+
+}
+.nick-signup .link{
+
+    text-align: center;
+    margin: 10px 0;
+    font-size: 18px;
+
+}
+.nick-signup .link a{
+    color: rgb(226, 168, 43);
+
+}
+
+.nick-signup .link a:hover{
+    text-decoration: wavy;
+    font-weight: bolder;
+    color: blueviolet;
+    
+}
+
+.nick-signup form .inputs i{
+position: absolute;
+right: 15px;
+color: rgba(0, 0, 0, 0.301);
+top: 70%;
+transform: translateY(-50%);
+cursor: pointer;
+
+
+}
+.login{
+    padding: 25px 30px;
+    margin: 1px;
+}
+
+
+/*users*/
+.users{
+    padding: 25px 30px;
+    
+
+}
+.users header, .user-lists a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1pt solid rgba(45, 34, 17, 0.155);
+    padding-bottom: 20px;
+}
+.users header .content img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    
+
+
+}
+
+.wrapper img{
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+:is(.users, .user-lists) .content{
+    display: flex;
+    align-items: center;
+}
+
+:is(.users, .user-lists) .details span{
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+:is(.users, .user-lists) .details{
+    margin-left: 15px;
+    color: #000;
+}
+
+.users header .logout{
+    color: #fff;
+    background: rgb(48, 28, 3);
+    font-size: 17px;
+    padding: 8px 15px;
+    border-radius: 6px;
+}
+.users .search{
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+   
+}
+.users .search .text{
+
+    font-size: 20px;
+
+}
+.users .search input{
+    position: absolute;
+    height: 42px;
+    border: 1px solid rgb(47, 2, 2);
+    border-radius: 5px;
+    width: 79%;
+    padding: 0 13px;
+    outline: none;
+    font-size: 16px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+.users .search input.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.users .search button{
+    width: 47px;
+    height: 42px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+    background: aliceblue;
+    
+}
+ 
+/* will work with javascript with toggle */
+/* searchBar.classList.toggle("active"); */
+.users .search button.active{
+    color: #fff;
+    background-color: rgb(38, 2, 2);
+    
+    
+}
+.users .search button.active i::before{
+    content: "\f00d";
+    
+}
+ .user-lists img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    
+ }
+ .user-lists a .status-dot{
+    font-size: 12px;
+    color: rgb(5, 5, 167);
+ }
+
+ .user-lists a{
+margin-bottom: 10px;
+padding-right: 15px;
+page-break-after: 10px;
+border-bottom-color: rgba(202, 2, 159, 0.148);
+ }
+
+ .user-lists a:last-child{
+    border: none;
+    margin-bottom: 0px;
+ }
+ .user-lists{
+    max-height: 350px;
+    overflow-y: auto;
+ }
+.user-lists::-webkit-scrollbar{
+    width: 0px;
+}
+/* we will use this class name im php to show offline status */
+.user-lists a .status-dot.offline{
+    color: rgba(0, 0, 0, 0.281);
+}
+
+
+/* chat.html */
+
+.chat-area header{
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+}
+
+.chat-area img{
+    height: 45px;
+    width: 45px;
+
+}
+
+.chat-area .back-icon{
+    color: rgb(21, 20, 20);
+    font-size: 18px;
+    margin: 0 12px;
+}
+
+.chat-area header span{
+    font-weight: 550;
+    font-size: 18px;
+}
+.chat-area header .details{
+    
+    margin-left: 8px;
+}
+
+.chat-box{
+    height: 350px;
+    background: rgba(161, 151, 151, 0.189);
+    padding: 10px 30px 20px 30px;
+    overflow: auto;
+}
+
+.chat-box .outgoing{
+    display: flex;
+}
+
+.outgoing .details p{
+    background: rgba(0, 0, 0, 0.731);
+    color: #fff;
+    border-radius: 20px 20px 0 20px;
+}
+.chat-box .chat p{
+    padding: 8px 16px;
+    word-wrap: break-word;
+}
+.chat-box .chat{
+    margin: 15px 0;
+}
+.outgoing .details {
+max-width: calc(100% - 130px);
+margin-left: auto;
+}
+
+.chat-box .incoming img{
+height: 35px;
+width: 35px;
+}
+.chat-box .incoming{
+    display: flex;
+    align-items: flex-end;
+}
+
+.chat-box .incoming p{ 
+    background: aliceblue;
+    border-radius: 20px 20px 20px 0;
+}
+
+.incoming .details {
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: calc(100% - 130px);
+}
+
+.chat-box::-webkit-scrollbar{
+    width: 0px;
+}
+
+.chat-area .typing-area{
+padding: 18px 30px;
+display: flex;
+justify-content: space-between;
+}
+
+.typing-area input{
+height: 45px;
+width: calc(100% - 58px);
+font-size: 14px;
+border: 1px solid rgba(41, 31, 31, 0.434);
+border-radius: 7px 0 0 7px;
+padding: 0 13px;
+outline: none;
+
+}
+
+.typing-area button{
+    width: 55px;
+    border: none;
+    outline: none;
+    margin-left: 3px;
+    border-radius: 0 7px 7px 0;
+    background: rgb(71, 47, 47);
+    font-size: 29px;
+    color: aliceblue;
+}
+
+.login form .submit{
+   align-items: center;
+}
+.login form .submit input{
+    height: 40px;
+    border: none;
+    width: 60%;
+    border-radius: 7px;
+    color: whitesmoke;
+    background-color: rgb(10, 97, 68);
+    font-size: medium;
+    font-weight: 600;
+    font-style: oblique;
+    cursor: pointer;
+    margin-left: 2%;
+}
+.login form{
+    align-items: center;
+    margin: 10px;
+    justify-content: center;
+}
+.login form .inputs input{
+
+    font-size: 16px;
+    height: 30px;
+    width: 70%;
+    border-radius: 10px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    
+}
+.login form .inputs label{
+    margin-left: 10px;
+    margin-bottom: 0;
+    font-size: large;
+    font-weight: 700;
+}
+#login-header{
+    margin-left: 4%;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(75, 2, 74);
+    font-style: oblique;
+    border-bottom: 2px solid green;
+    
+}
+
+.login form .inputs i{
+    margin-left: -30px;
+}
+
+.login .link a{
+    color: rgb(20, 6, 148);
+}
+.login .link a:hover{
+    color: rgb(167, 7, 125);
+    transition: 2ms;
+    font-weight: 600;
+}
+
+.login form .mistake-text{
+    background-color: rgba(190, 16, 16, 0.29);
+    padding: 8px 10px;
+    text-align: center;
+    color: rgb(226, 43, 195);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(234, 7, 154);  
+    display: none;  
+}
