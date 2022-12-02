@@ -16,10 +16,10 @@ if(!empty($eml) && !empty($pass)){  //if email and password are filled
         $row = mysqli_fetch_assoc($sql);
         //updating user status to active 
         $status = "Active now";
-        $sql = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE unique_id={$row['unique_id']}");
+        $sql2 = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE unique_id={$row['unique_id']}");
 //now we will work as with signup. get the unique id of current logged user 
 //and use it in a sessin to use another php page
-        if($sql){ 
+        if($sql2){ 
        $_SESSION['unique_id'] = $row['unique_id']; // session will use the user unique id in the other php file
        echo "success";
     }

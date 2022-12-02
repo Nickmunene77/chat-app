@@ -253,7 +253,7 @@ border-bottom-color: rgba(202, 2, 159, 0.148);
 }
 /* we will use this class name im php to show offline status */
 .user-lists a .status-dot.offline{
-    color: rgba(0, 0, 0, 0.281);
+    color: rgba(0, 0, 0, 0.689);
 }
 
 

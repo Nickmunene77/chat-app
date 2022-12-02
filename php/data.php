@@ -27,7 +27,7 @@ if(mysqli_num_rows($query2)>0){
 ($outgoing_id == $row2['outgoing_id']) ? $you = "You: "  : $you = "";
 
 //check user is online or not
-($row['status'] == "offline ")  ? $offline = "offline" : $offline = "";
+($row['status'] == "Offline")  ? $offline = "offline" : $offline = "";
 
     $output .= '<a href="chat.php?user_id='.$row['unique_id'].'">
                <div class="content">

@@ -1,3 +1,12 @@
+<?php
+
+if(isset($_SESSION['unique_id'])){ //if user is logged in
+    header("location: user.php");
+
+}
+
+?>
+
 <?php include_once "header.php"; ?>
 <body>
     <div class="wrapper">
