@@ -10,7 +10,7 @@ session_start();
        include "data.php";
 
   }else{ 
-      $output = "no search user found";
+      $output .= "no search user found";
   }
 
   echo $output;

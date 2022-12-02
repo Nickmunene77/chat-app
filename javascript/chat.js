@@ -32,7 +32,7 @@ sendButton.onclick = () => {
 
     xhr.send(formData); //sending formData to the php
 }
-
+//this will stop the scrolll down when user scrolls up  MUST BE INCLUDED TO SCROLL UP
 chatBox.onmouseenter =()=>{
     chatBox.classList.add("active");
 }
